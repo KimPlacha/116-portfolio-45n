@@ -1,42 +1,77 @@
 /* Responsive Design and the Breakpoints
 
-Good practices: Add at least two media queries, one for tablet (medium screens) and one for phones (small screens).
+Good practices: Add at least two media queries, one for tablet (midum screens) and one for phones (small screens).
 
 Following the Microsoft documentation.
 
--Phone or small screen
-    @media(max-width: 640px) {
+- Phone or Small screen
+    @media(max-width:640px) {
+        //Your style here
     }
--Tablet or medium screen
-    @media(min-width: 641px) and (max-width: 1007px) {
+
+- Tablet or Medium screen
+    @media((min-width:641px) and (max-width:1007px)){
+        //Your style here
     }
 */
 
-@media((min-width:641px) and (max-width:1007px)) {
+@media(max-width:1007px) {
     html {
         font-size: 12px;
     }
-}
 
-@media(max-width:640px){
-    html {
-        font-size: 10px;
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-description-container {
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    .about-image-container {
+        width: 100%;
+    }
+    .about-image-container Img {
+        height: 30rem;
+        object-position: center 40%;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        object-position: center 50%;
+    }
+
+    .project-card a {
+        width: 100%;
+        height: min-content;
+        flex-direction: column;
     }
 }
 
+@media(max-width:640px) {
+    html {
+        font-size: 10px;
+    }
+
     header {
-        flex-direction: center;
+        flex-direction: column;
         height: max-content;
         padding: 2%;
     }
 
-    .nav-btn {
-        display: inline-flex;
-    }
-
     .nav-option {
         flex-direction: column;
-        background-color: red;
+    }
+
+    .nav-btn {
+        display: inline-flex;
     }
 
     .nav-btn span {
@@ -53,7 +88,8 @@ Following the Microsoft documentation.
         overflow: hidden;
     }
 
-    #check-option:checked~.nav-option {
+    #check-option::checked~.nav-option {
         height: auto;
-        overflow: auto;
+        overflow: hidden;
     }
+}

@@ -1,20 +1,22 @@
 header {
-    background-color: var(--surface-color);
+    background-color: var(--primary-color);
     height: 60px;
     position: sticky;
     top: 0px;
+    justify-content: center;
+    text-align: center;
     display: flex;
+    flex-direction: row;
 }
 
-/*---LEFT SIDE---*/
+/*left side*/
 .logo {
     width: 20%;
 }
 
-/*---RIGHT SIDE---*/
+/*right side*/
 .nav-menu {
     width: 80%;
-    height: 100%;
 }
 
 .nav-menu a {
@@ -25,12 +27,6 @@ header {
     padding: 1% 2%;
 }
 
-.nav-menu a:hover {
-    border-bottom: solid 2px var(--primary-color);
-}
-
 .nav-option {
     width: 100%;
-    height: 100%;
 }
-
